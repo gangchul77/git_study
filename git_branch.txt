@@ -2,6 +2,7 @@
  branch 기본 명령어
 ------------------------------------------------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 branch								                                                팀원별 소스관리
 ==========
 
@@ -14,12 +15,30 @@ git branch -a							                                          branch 전체보�
 
 ( git checkout 전에는 항상 commit을 해준다 )
 git checkout <branch-name>						                              branch 전환
+=======
+branch								팀원별 소스관리
+==========
+
+git branch <branch-name>						branch 만들기
+
+git branch								branch 전체보기 ( local )
+git branch -r							branch 전체보기 ( server )
+git branch -a							branch 전체보기 ( 양쪽 모두 )
+
+
+( git checkout 전에는 항상 commit을 해준다 )
+git checkout <branch-name>						branch 전환
+>>>>>>> steellee
 
 git push origin <branch-name>
 git log
 
 ( ## local )
+<<<<<<< HEAD
 git branch -d <branch-name>					                    	         브랜치 삭제
+=======
+git branch -d <branch-name>						브랜치 삭제
+>>>>>>> steellee
 git branch
 
 ( ## remote == server )
@@ -30,7 +49,10 @@ git push --delete origin < branch-name>
   master로 merge 하기
 ------------------------------------------------------------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> steellee
 branch
 =========
 (local branch)
@@ -40,9 +62,15 @@ git
 git branch 								local 브런치 확인
 git add --all
 git commit -al 'commit_message'
+<<<<<<< HEAD
 git push origin <작업중인 branch-name>					                      local branch -> server에 브런치 등록
 
 git checkout -p <branch-name> <file-name>				                   local브런치 지정파일 source master로 패치
+=======
+git push origin <작업중인 branch-name>					local branch -> server에 브런치 등록
+
+git checkout -p <branch-name> <file-name>					local브런치 지정파일 source master로 패치
+>>>>>>> steellee
 git checkout -p <branch-name>
 git add <file-name>							특정파일 adding
 git add --all							모든파일 adding
@@ -56,6 +84,7 @@ merge
 =========
 ( local branch  작업 후 local master로 소스 이동은 merge )
 
+<<<<<<< HEAD
 git checkout <branch-name>					                                	source 받을곳으로 branch 이동
 
 git checkout master						                                      	local 소스 master에 merge 하기위해 이동
@@ -66,20 +95,47 @@ git diff <branch-name>					                                    	소스 가져올
 git diff <branch-name> <file-name>				                          특정 파일만 확인
 
 git merge<소스 받을 branch-name>					                          	 source 가져올 branch
+=======
+git checkout <branch-name>						source 받을곳으로 branch 이동
+
+git checkout master							local 소스 master에 merge 하기위해 이동
+( local master로 이동 후 )
+( ## merge 전 항상  check  diff)
+
+git diff <branch-name>						소스 가져올 local <branch-name>
+git diff <branch-name> <file-name>					특정 파일만 확인
+
+git merge<소스 받을 branch-name>						source 가져올 branch
+>>>>>>> steellee
 
 ## conflict (non fast-forward)
 git status
 
 
-
-
-
+<<<<<<< HEAD
+=======
 ------------------------------------------------------------------------------------------------------------------------------------
  서버의 특정 branch 가져오기
 ------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>> steellee
+
+git checkout -t origin/<branch-name>					서버의 특정  branch 받아오기
+
+
+<<<<<<< HEAD
+------------------------------------------------------------------------------------------------------------------------------------
+ 서버의 특정 branch 가져오기
+------------------------------------------------------------------------------------------------------------------------------------
+=======
+git push origin<branch-name>
+git pull origin<branch-name>
+>>>>>>> steellee
 
 git checkout -t origin/<branch-name>				                        	서버의 특정  branch 받아오기
 
+<<<<<<< HEAD
 
 git push origin<branch-name>
 git pull origin<branch-name>
+=======
+>>>>>>> steellee
