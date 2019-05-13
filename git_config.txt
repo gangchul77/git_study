@@ -17,6 +17,14 @@ add
 pull
 push
 
+
+working directory
+staging area
+git repository
+
+
+
+
 --------------------------------------------------------------------------------------------
  git configration
 --------------------------------------------------------------------------------------------
@@ -60,3 +68,40 @@ git push -u origin master					메인서버에  소스 올리기
 
 --------------------------------------------------------------------------------------------
 git clone <github-remote-url>					Gitbub에 만든 repository와 클론하기
+
+
+
+
+
+--------------------------------------------------------------------------------------------
+ git Reset, Revert & Merge
+--------------------------------------------------------------------------------------------
+git reset							source 변경, log 기록 삭제 ( rollback이후 log)
+===========
+						 
+git reset <rollback log_instance_id>				rollback 버전으로 소스변경후 		
+git commit -am 'rollback message'			
+git push origin +master
+
+git reset --hard
+============
+
+
+
+
+git revert							source 변경, log 기록 보존
+============
+
+git revert <rollback log_instance_id>				rollback 버전으로 소스변경후
+git commit -am 'commit_message'
+git push 
+
+
+
+
+--------------------------------------------------------------------------------------------
+ git commit list
+--------------------------------------------------------------------------------------------
+git log							커밋목록 보기
+git log --graph --oneline					로그 그래프로 한줄씩 보기
+
