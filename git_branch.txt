@@ -1,25 +1,25 @@
 ------------------------------------------------------------------------------------------------------------------------------------
- branch ±âº» ¸í·É¾î
+ branch ê¸°ë³¸ ëª…ë ¹ì–´
 ------------------------------------------------------------------------------------------------------------------------------------
 
-branch								ÆÀ¿øº° ¼Ò½º°ü¸®
+branch								íŒ€ì›ë³„ ì†ŒìŠ¤ê´€ë¦¬
 ==========
 
-git branch <branch-name>						branch ¸¸µé±â
+git branch <branch-name>						branch ë§Œë“¤ê¸°
 
-git branch								branch ÀüÃ¼º¸±â ( local )
-git branch -r							branch ÀüÃ¼º¸±â ( server )
-git branch -a							branch ÀüÃ¼º¸±â ( ¾çÂÊ ¸ğµÎ )
+git branch								branch ì „ì²´ë³´ê¸° ( local )
+git branch -r							branch ì „ì²´ë³´ê¸° ( server )
+git branch -a							branch ì „ì²´ë³´ê¸° ( ì–‘ìª½ ëª¨ë‘ )
 
 
-( git checkout Àü¿¡´Â Ç×»ó commitÀ» ÇØÁØ´Ù )
-git checkout <branch-name>						branch ÀüÈ¯
+( git checkout ì „ì—ëŠ” í•­ìƒ commitì„ í•´ì¤€ë‹¤ )
+git checkout <branch-name>						branch ì „í™˜
 
-git push origin <branch-name>						
-git log  
+git push origin <branch-name>
+git log
 
 ( ## local )
-git branch -d <branch-name>						ºê·£Ä¡ »èÁ¦
+git branch -d <branch-name>						ë¸Œëœì¹˜ ì‚­ì œ
 git branch
 
 ( ## remote == server )
@@ -27,60 +27,59 @@ git push --delete origin < branch-name>
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
-  master·Î merge ÇÏ±â
+  masterë¡œ merge í•˜ê¸°
 ------------------------------------------------------------------------------------------------------------------------------------
 
-git checkout <branch-name>						source ¹ŞÀ»°÷À¸·Î branch ÀÌµ¿
-git merge<branch-name>						source °¡Á®¿Ã branch 
 
-## conflict (non fast-forward)						
-git status
+branch
+=========
+(local branch)
+git
+ì†ŒìŠ¤ ì‘ì—…í›„
+
+git branch 								local ë¸ŒëŸ°ì¹˜ í™•ì¸
+git add --all
+git commit -al 'commit_message'
+git push origin <ì‘ì—…ì¤‘ì¸ branch-name>					local branch -> serverì— ë¸ŒëŸ°ì¹˜ ë“±ë¡
+
+git checkout -p <branch-name> <file-name>					localë¸ŒëŸ°ì¹˜ ì§€ì •íŒŒì¼ source masterë¡œ íŒ¨ì¹˜
+git checkout -p <branch-name>
+git add <file-name>							íŠ¹ì •íŒŒì¼ adding
+git add --all							ëª¨ë“ íŒŒì¼ adding
+
+git status								add íŒŒì¼ ëª©ë¡ í™•ì¸
+git commit -am 'commit_message'
+git push origin master
 
 
 merge
 =========
+( local branch  ì‘ì—… í›„ local masterë¡œ ì†ŒìŠ¤ ì´ë™ì€ merge )
 
-git branch 								local ºê·±Ä¡ È®ÀÎ
-git add --all
-git commit -al 'commit_message'
-git push origin <branch-name>
+git checkout <branch-name>						source ë°›ì„ê³³ìœ¼ë¡œ branch ì´ë™
 
-( ## merge Àü Ç×»ó  check  diff)
-git checkout master							local ¼Ò½º master¿¡ merge ÇÏ±âÀ§ÇØ ÀÌµ¿
-git diff <branch-name>						¼Ò½º °¡Á®¿Ã local <branch-name>
-git diff <branch-name> <file-name>					Æ¯Á¤ ÆÄÀÏ¸¸ È®ÀÎ
+git checkout master							local ì†ŒìŠ¤ masterì— merge í•˜ê¸°ìœ„í•´ ì´ë™
+( local masterë¡œ ì´ë™ í›„ )
+( ## merge ì „ í•­ìƒ  check  diff)
 
-git checkout -p <branch-name> <file-name>					localºê·±Ä¡ ÁöÁ¤ÆÄÀÏ source master·Î ÆĞÄ¡
-git checkout -p <branch-name>						localºê·±Ä¡ ÀüÃ¼ source master·Î ÆĞÄ¡
+git diff <branch-name>						ì†ŒìŠ¤ ê°€ì ¸ì˜¬ local <branch-name>
+git diff <branch-name> <file-name>					íŠ¹ì • íŒŒì¼ë§Œ í™•ì¸
 
-git add <file-name>							Æ¯Á¤ÆÄÀÏ adding
-git add --all							¸ğµçÆÄÀÏ adding
+git merge<ì†ŒìŠ¤ ë°›ì„ branch-name>						source ê°€ì ¸ì˜¬ branch
 
-git status								add ÆÄÀÏ ¸ñ·Ï È®ÀÎ
-git commit -am 'commit_message'					
-git push origin master
+## conflict (non fast-forward)
+git status
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
- ¼­¹öÀÇ Æ¯Á¤ branc °¡Á®¿À±â
+ ì„œë²„ì˜ íŠ¹ì • branch ê°€ì ¸ì˜¤ê¸°
 ------------------------------------------------------------------------------------------------------------------------------------
 
-git checkout -t origin/<branch-name>					¼­¹öÀÇ Æ¯Á¤  branch ¹Ş¾Æ¿À±â
+git checkout -t origin/<branch-name>					ì„œë²„ì˜ íŠ¹ì •  branch ë°›ì•„ì˜¤ê¸°
 
 
 git push origin<branch-name>
 git pull origin<branch-name>
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------------------
