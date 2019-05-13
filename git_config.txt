@@ -69,9 +69,7 @@ git repogitory configuration & source download
 --------------------------------------------------------------------------------------------
 
 git clone
-
-git clone <github-remote-url>					Gitbub�� ���� repository�� Ŭ���ϱ�
-=======
+===========
 git clone <github-remote-url>					Gitbub에 만든 repository와 클론하기
 
 
