@@ -27,10 +27,14 @@ git add .
 git add <file-name>
 
 git commit -am 'commit massage'
+<<<<<<< HEAD
 =======
 =======
 git add --all						                        gitignore 작성외 파일 모두 adding
 git commit -am 'git_configration '
+=======
+
+>>>>>>> 1fa420b81b8f6aa5b0c56d39d3eafc8a81e9c612
 --------------------------------------------------------------------------------------------------------
 local repository --> server repository 연결
 --------------------------------------------------------------------------------------------------------

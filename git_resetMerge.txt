@@ -1,8 +1,8 @@
-git reset						                	source ë³€ê²½, log ê¸°ë¡ ì‚­ì œ ( rollbackì´í›„ log)
+git reset							source º¯°æ, log ±â·Ï »èÁ¦ ( rollbackÀÌÈÄ log)
 ===========
-
-git reset <rollback log_instance_id>				rollback ë²„ì „ìœ¼ë¡œ ì†ŒìŠ¤ë³€ê²½í›„
-git commit -am 'rollback message'
+						 
+git reset <rollback log_instance_id>				rollback ¹öÀüÀ¸·Î ¼Ò½ºº¯°æÈÄ 		
+git commit -am 'rollback message'			
 git push origin +master
 
 git reset --hard
@@ -11,9 +11,9 @@ git reset --hard
 
 
 
-git revert							                source ë³€ê²½, log ê¸°ë¡ ë³´ì¡´
+git revert							source º¯°æ, log ±â·Ï º¸Á¸
 ============
 
-git revert <rollback log_instance_id>				rollback ë²„ì „ìœ¼ë¡œ ì†ŒìŠ¤ë³€ê²½í›„
+git revert <rollback log_instance_id>				rollback ¹öÀüÀ¸·Î ¼Ò½ºº¯°æÈÄ
 git commit -am 'commit_message'
-git push
+git push 
