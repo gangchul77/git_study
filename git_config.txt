@@ -11,7 +11,6 @@ git config user.email
 
 git config --global user.name <github-name>
 git config --global user.email<email>
-
 git config 						                            한눈에보기
 cat ~/.gitconfig 					                        파일 설정
 
@@ -21,14 +20,17 @@ git 폴더 설정 ( local 저장소 )
 cd <working-directory>
 
 git init
-.gitignore 파일작성						                    git에 올리고 싶지않은 파일/디렉토리 목록
+.gitignore 파일작성						                    git에 올리고 싶지않은 파일/디렉토리 목록<<<<<<< HEAD<<<<<<< HEAD
 
 git add --all						                         working-directory에 수정/생성/변경된 파일 모두 staging upload ( .gitignore 등록 제외)
 git add .
 git add <file-name>
 
+git commit -am 'commit massage'
+=======
+=======
+git add --all						                        gitignore 작성외 파일 모두 adding
 git commit -am 'git_configration '
-
 --------------------------------------------------------------------------------------------------------
 local repository --> server repository 연결
 --------------------------------------------------------------------------------------------------------
