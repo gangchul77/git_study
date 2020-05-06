@@ -22,7 +22,11 @@ cd <working-directory>
 
 git init
 .gitignore 파일작성						                    git에 올리고 싶지않은 파일/디렉토리 목록
-git add --all						                        gitignore 작성외 파일 모두 adding
+
+git add --all						                         working-directory에 수정/생성/변경된 파일 모두 staging upload ( .gitignore 등록 제외)
+git add .
+git add <file-name>
+
 git commit -am 'git_configration '
 
 --------------------------------------------------------------------------------------------------------
