@@ -27,7 +27,7 @@ git add --all						                         working-directory에 수정/생성/�
 git add .
 git add <file-name>
 
-git commit -am 'git_configration '
+git commit -am 'commit massage'
 
 --------------------------------------------------------------------------------------------------------
 local repository --> server repository 연결
